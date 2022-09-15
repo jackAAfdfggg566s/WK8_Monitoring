@@ -26,7 +26,7 @@ resource "aws_security_group_rule" "monitor_ports" {
 
 resource "aws_key_pair" "deployer" {
   key_name   = "ansible-deployer-key"
-  public_key = file("/var/lib/jenkins/.ssh/id_rsa.pub")
+  public_key = file("/root/.ssh/id_rsa.pub")
 }
 
 data "aws_ami" "image-ubuntu" {
